@@ -166,6 +166,8 @@ public class WaterGen : MonoBehaviour
 
         mf = GetComponent<MeshFilter>();
         mf.sharedMesh = mesh;
+        GetComponent<MeshCollider>().sharedMesh = null;
+        GetComponent<MeshCollider>().sharedMesh = mf.mesh;
     }
 
     IEnumerator WaterWaves()
