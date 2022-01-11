@@ -38,9 +38,45 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3880854955446753063}
     m_Modifications:
+    - target: {fileID: 1721738836651451711, guid: a80b8f0df076e5e49b35929919578185, type: 3}
+      propertyPath: m_Size.x
+      value: 5.990174
+      objectReference: {fileID: 0}
+    - target: {fileID: 1721738836651451711, guid: a80b8f0df076e5e49b35929919578185, type: 3}
+      propertyPath: m_Size.y
+      value: 0.7513974
+      objectReference: {fileID: 0}
+    - target: {fileID: 1721738836651451711, guid: a80b8f0df076e5e49b35929919578185, type: 3}
+      propertyPath: m_Size.z
+      value: 5.969155
+      objectReference: {fileID: 0}
+    - target: {fileID: 1721738836651451711, guid: a80b8f0df076e5e49b35929919578185, type: 3}
+      propertyPath: m_Center.x
+      value: 0.58755004
+      objectReference: {fileID: 0}
+    - target: {fileID: 1721738836651451711, guid: a80b8f0df076e5e49b35929919578185, type: 3}
+      propertyPath: m_Center.y
+      value: 0.4643616
+      objectReference: {fileID: 0}
+    - target: {fileID: 1721738836651451711, guid: a80b8f0df076e5e49b35929919578185, type: 3}
+      propertyPath: m_Center.z
+      value: 0.37259138
+      objectReference: {fileID: 0}
     - target: {fileID: 2442101813543476726, guid: a80b8f0df076e5e49b35929919578185, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2442101813543476726, guid: a80b8f0df076e5e49b35929919578185, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2442101813543476726, guid: a80b8f0df076e5e49b35929919578185, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2442101813543476726, guid: a80b8f0df076e5e49b35929919578185, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5.25
       objectReference: {fileID: 0}
     - target: {fileID: 2442101813543476726, guid: a80b8f0df076e5e49b35929919578185, type: 3}
       propertyPath: m_LocalPosition.x
