@@ -25,17 +25,14 @@ public class PathGen : MonoBehaviour
     {
         intThatCan = 0;
         raycaster = FindObjectOfType<RaycastDown>();
-<<<<<<< HEAD
         leftSpawnable = raycaster.GetTagBellow(new Vector3(spawnPoint.transform.position.x - 56f, 400, spawnPoint.transform.position.z + 8));
         rightSpawnable = raycaster.GetTagBellow(new Vector3(spawnPoint.transform.position.x + 56f, 400, spawnPoint.transform.position.z + 8));
         backSpawnable = raycaster.GetTagBellow(new Vector3(spawnPoint.transform.position.x + 8, 400, spawnPoint.transform.position.z - 56f));
         forwardSpawnable = raycaster.GetTagBellow(new Vector3(spawnPoint.transform.position.x + 8, 400, spawnPoint.transform.position.z + 56f));
-=======
         leftSpawnable = raycaster.GetTagBellow(new Vector3(spawnPoint.transform.position.x - 47.4f, 400, spawnPoint.transform.position.z + 1));
         rightSpawnable = raycaster.GetTagBellow(new Vector3(spawnPoint.transform.position.x + 47.4f, 400, spawnPoint.transform.position.z + 1));
         backSpawnable = raycaster.GetTagBellow(new Vector3(spawnPoint.transform.position.x + 1, 400, spawnPoint.transform.position.z - 47.4f));
         forwardSpawnable = raycaster.GetTagBellow(new Vector3(spawnPoint.transform.position.x + 1, 400, spawnPoint.transform.position.z + 47.4f));
->>>>>>> 35981780b0036c373801b960e7842740acb83a39
 
         if (leftSpawnable == true)
             intThatCan++;
@@ -91,7 +88,7 @@ public class PathGen : MonoBehaviour
         //Spawn it at the PathEndPoint and rotate it to the direction it needs to be
         //If the end point is off the grass, don't spawn it
 
-        int numOfPaths = Random.Range(1, 4);
+        int numOfPaths = Random.Range(1, 3);
         result = "";
         if (weCanSpawn.Length != 0)
         {
@@ -103,47 +100,35 @@ public class PathGen : MonoBehaviour
             {
                 //1.28
                 newSpawn.x -= 24.98f;
-<<<<<<< HEAD
                 newSpawn.y += 0.01f;
-=======
->>>>>>> 35981780b0036c373801b960e7842740acb83a39
                 GameObject tempPath = Instantiate(path, newSpawn, Quaternion.Euler(0, -90, 0));
                 tempPath.name = "Path";
             }
             else if (result == "right")
             {
                 newSpawn.x += 24.98f;
-<<<<<<< HEAD
                 newSpawn.y += 0.02f;
-=======
->>>>>>> 35981780b0036c373801b960e7842740acb83a39
                 GameObject tempPath = Instantiate(path, newSpawn, Quaternion.Euler(0, 90, 0));
                 tempPath.name = "Path";
             }
             else if (result == "forward")
             {
                 newSpawn.z += 24.98f;
-<<<<<<< HEAD
                 newSpawn.y -= 0.01f;
-=======
->>>>>>> 35981780b0036c373801b960e7842740acb83a39
                 GameObject tempPath = Instantiate(path, newSpawn, Quaternion.Euler(0, 0, 0));
                 tempPath.name = "Path";
             }
             else if (result == "back")
             {
                 newSpawn.z -= 24.98f;
-<<<<<<< HEAD
                 newSpawn.y -= 0.02f;
-=======
->>>>>>> 35981780b0036c373801b960e7842740acb83a39
                 GameObject tempPath = Instantiate(path, newSpawn, Quaternion.Euler(0, 180, 0));
                 tempPath.name = "Path";
             }
         }
 
         yield return new WaitForSeconds(Random.Range(0.1f, 2.0f));
-        if (weCanSpawn.Length >= 2 && numOfPaths == 3)
+        if (weCanSpawn.Length >= 2 && numOfPaths == 2)
         {
             Vector3 newSpawn = spawnPoint.transform.position;
             if (rightSpawnable == true && result != "right" && raycaster.GetTagBellow(new Vector3(spawnPoint.transform.position.x + 47.4f, 400, spawnPoint.transform.position.z + 1)) == true)
@@ -187,7 +172,7 @@ public class PathGen : MonoBehaviour
             Instantiate(houses[houseToSpawn], newSpawn, Quaternion.Euler(0, 180, 0));
             Debug.Log("Spawned left");
         }
-        else if (result == "right" && raycaster.GetTagBellow(new Vector3(spawnPoint.transform.position.x + 25f, 400, spawnPoint.transform.position.z + 25f)) == true)
+        else if (result == "right" && raycaster.GetTagBellow(new Vector3(spawnPoint.transform.position.x + 35f, 400, spawnPoint.transform.position.z + 35f)) == true)
         {
             Vector3 newSpawn = spawnPoint.transform.position;
             newSpawn.x += 25f;
@@ -213,7 +198,7 @@ public class PathGen : MonoBehaviour
         }
 
         houseToSpawn = Random.Range(0, 5);
-        if (result == "left" && raycaster.GetTagBellow(new Vector3(spawnPoint.transform.position.x - 25f, 400, spawnPoint.transform.position.z + 25f)) == true)
+        if (result == "left" && raycaster.GetTagBellow(new Vector3(spawnPoint.transform.position.x - 25f, 400, spawnPoint.transform.position.z + 35f)) == true)
         {
             Vector3 newSpawn = spawnPoint.transform.position;
             newSpawn.x -= 25f;
