@@ -25,14 +25,14 @@ public class PathGen : MonoBehaviour
     {
         intThatCan = 0;
         raycaster = FindObjectOfType<RaycastDown>();
-        leftSpawnable = raycaster.GetTagBellow(new Vector3(spawnPoint.transform.position.x - 56f, 400, spawnPoint.transform.position.z + 8));
-        rightSpawnable = raycaster.GetTagBellow(new Vector3(spawnPoint.transform.position.x + 56f, 400, spawnPoint.transform.position.z + 8));
-        backSpawnable = raycaster.GetTagBellow(new Vector3(spawnPoint.transform.position.x + 8, 400, spawnPoint.transform.position.z - 56f));
-        forwardSpawnable = raycaster.GetTagBellow(new Vector3(spawnPoint.transform.position.x + 8, 400, spawnPoint.transform.position.z + 56f));
-        leftSpawnable = raycaster.GetTagBellow(new Vector3(spawnPoint.transform.position.x - 47.4f, 400, spawnPoint.transform.position.z + 1));
+        leftSpawnable = raycaster.GetTagBellow(new Vector3(spawnPoint.transform.position.x - 56f, 400, spawnPoint.transform.position.z + 7));
+        rightSpawnable = raycaster.GetTagBellow(new Vector3(spawnPoint.transform.position.x + 56f, 400, spawnPoint.transform.position.z + 7));
+        backSpawnable = raycaster.GetTagBellow(new Vector3(spawnPoint.transform.position.x + 7, 400, spawnPoint.transform.position.z - 56f));
+        forwardSpawnable = raycaster.GetTagBellow(new Vector3(spawnPoint.transform.position.x + 7, 400, spawnPoint.transform.position.z + 56f));
+        /*leftSpawnable = raycaster.GetTagBellow(new Vector3(spawnPoint.transform.position.x - 47.4f, 400, spawnPoint.transform.position.z + 1));
         rightSpawnable = raycaster.GetTagBellow(new Vector3(spawnPoint.transform.position.x + 47.4f, 400, spawnPoint.transform.position.z + 1));
         backSpawnable = raycaster.GetTagBellow(new Vector3(spawnPoint.transform.position.x + 1, 400, spawnPoint.transform.position.z - 47.4f));
-        forwardSpawnable = raycaster.GetTagBellow(new Vector3(spawnPoint.transform.position.x + 1, 400, spawnPoint.transform.position.z + 47.4f));
+        forwardSpawnable = raycaster.GetTagBellow(new Vector3(spawnPoint.transform.position.x + 1, 400, spawnPoint.transform.position.z + 47.4f));*/
 
         if (leftSpawnable == true)
             intThatCan++;
@@ -131,26 +131,26 @@ public class PathGen : MonoBehaviour
         if (weCanSpawn.Length >= 2 && numOfPaths == 2)
         {
             Vector3 newSpawn = spawnPoint.transform.position;
-            if (rightSpawnable == true && result != "right" && raycaster.GetTagBellow(new Vector3(spawnPoint.transform.position.x + 47.4f, 400, spawnPoint.transform.position.z + 1)) == true)
+            if (rightSpawnable == true && result != "right" && raycaster.GetTagBellow(new Vector3(spawnPoint.transform.position.x + 56f, 400, spawnPoint.transform.position.z + 7)) == true)
             {
                 newSpawn.x += 24.98f;
                 GameObject tempPath = Instantiate(path, newSpawn, Quaternion.Euler(0, 90, 0));
                 tempPath.name = "Path";
             }
             //27.5
-            else if (leftSpawnable == true && result != "left" && raycaster.GetTagBellow(new Vector3(spawnPoint.transform.position.x - 47.4f, 400, spawnPoint.transform.position.z + 1)) == true)
+            else if (leftSpawnable == true && result != "left" && raycaster.GetTagBellow(new Vector3(spawnPoint.transform.position.x - 56f, 400, spawnPoint.transform.position.z + 7)) == true)
             {
                 newSpawn.x -= 24.98f;
                 GameObject tempPath = Instantiate(path, newSpawn, Quaternion.Euler(0, -90, 0));
                 tempPath.name = "Path";
             }
-            else if (forwardSpawnable == true && result != "forward" && raycaster.GetTagBellow(new Vector3(spawnPoint.transform.position.x + 1, 400, spawnPoint.transform.position.z + 47.4f)) == true)
+            else if (forwardSpawnable == true && result != "forward" && raycaster.GetTagBellow(new Vector3(spawnPoint.transform.position.x + 7, 400, spawnPoint.transform.position.z + 56f)) == true)
             {
                 newSpawn.z += 24.98f;
                 GameObject tempPath = Instantiate(path, newSpawn, Quaternion.Euler(0, 0, 0));
                 tempPath.name = "Path";
             }
-            else if (backSpawnable == true && result != "back" && raycaster.GetTagBellow(new Vector3(spawnPoint.transform.position.x + 1, 400, spawnPoint.transform.position.z - 47.4f)) == true)
+            else if (backSpawnable == true && result != "back" && raycaster.GetTagBellow(new Vector3(spawnPoint.transform.position.x + 7, 400, spawnPoint.transform.position.z - 56f)) == true)
             {
                 newSpawn.z -= 24.98f;
                 GameObject tempPath = Instantiate(path, newSpawn, Quaternion.Euler(0, 180, 0));
@@ -188,7 +188,7 @@ public class PathGen : MonoBehaviour
             Instantiate(houses[houseToSpawn], newSpawn, Quaternion.Euler(0, -90, 0));
             Debug.Log("Spawned forward");
         }
-        else if (result == "back" && raycaster.GetTagBellow(new Vector3(spawnPoint.transform.position.x + 25f, 400, spawnPoint.transform.position.z - 25f)) == true)
+        else if (result == "back" && raycaster.GetTagBellow(new Vector3(spawnPoint.transform.position.x + 35f, 400, spawnPoint.transform.position.z - 8f)) == true)
         {
             Vector3 newSpawn = spawnPoint.transform.position;
             newSpawn.x += 25f;
@@ -214,7 +214,7 @@ public class PathGen : MonoBehaviour
             Instantiate(houses[houseToSpawn], newSpawn, Quaternion.Euler(0, 180, 0));
             Debug.Log("Spawned right");
         }
-        else if (result == "forward" && raycaster.GetTagBellow(new Vector3(spawnPoint.transform.position.x + 25f, 400, spawnPoint.transform.position.z + 25f)) == true)
+        else if (result == "forward" && raycaster.GetTagBellow(new Vector3(spawnPoint.transform.position.x + 39f, 400, spawnPoint.transform.position.z + 40f)) == true)
         {
             Vector3 newSpawn = spawnPoint.transform.position;
             newSpawn.x += 25f;
