@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5178085177959981802
 Transform:
@@ -82,9 +82,49 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2588927726845202160, guid: 4283b7309dfe0904bb9f057524e28baf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2588927727152482392, guid: 4283b7309dfe0904bb9f057524e28baf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2588927727616872950, guid: 4283b7309dfe0904bb9f057524e28baf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2588927728952161606, guid: 4283b7309dfe0904bb9f057524e28baf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2588927729036022094, guid: 4283b7309dfe0904bb9f057524e28baf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2588927729321315998, guid: 4283b7309dfe0904bb9f057524e28baf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2588927729331617066, guid: 4283b7309dfe0904bb9f057524e28baf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2588927729396461502, guid: 4283b7309dfe0904bb9f057524e28baf, type: 3}
       propertyPath: m_Name
       value: house_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2588927729396461502, guid: 4283b7309dfe0904bb9f057524e28baf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2588927729698118620, guid: 4283b7309dfe0904bb9f057524e28baf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2588927729894381922, guid: 4283b7309dfe0904bb9f057524e28baf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8659983385293013258, guid: 4283b7309dfe0904bb9f057524e28baf, type: 3}
       propertyPath: m_Size.x

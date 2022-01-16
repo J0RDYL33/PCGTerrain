@@ -188,11 +188,13 @@ public class RaycastDown : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.green;
+        /*Gizmos.color = Color.green;
         Debug.DrawRay(transform.position, -Vector3.up * 1000, Color.green);
         Debug.DrawRay(cube2.transform.position, -Vector3.up * 1000, Color.green);
         Debug.DrawRay(cube3.transform.position, -Vector3.up * 1000, Color.green);
-        Debug.DrawRay(cube4.transform.position, -Vector3.up * 1000, Color.green);
+        Debug.DrawRay(cube4.transform.position, -Vector3.up * 1000, Color.green);*/
+
+
         /*Gizmos.DrawSphere(hit1.point, 1.0f);
         Gizmos.DrawSphere(hit2.point, 1.0f);
         Gizmos.DrawSphere(hit3.point, 1.0f);
